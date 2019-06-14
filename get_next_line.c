@@ -6,7 +6,7 @@
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 08:06:03 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/06/13 15:13:19 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/06/14 09:56:55 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 ** This function appends a single line into our line variable. We do this by
 ** finding the length of the line. If at index len, the character is a newline,
 ** we save the string into line up to the length found. Then we readjust the
-** stored data (**str) by creating a temporary string that stored the rest of data
-** after the newline. We free the stored data to update it to the current
-** address because we already append a line from it. This is done by freeing *str
-** and setting it equal to the temporary string that stored the remaining data.
-** At any point when we reach the end of the file, we free the memory used to
-** track our location in *str because it is not needed anymore.
+** stored data (**str) by creating a temporary string that stored the rest of
+** data after the newline. We free the stored data to update it to the current
+** address because we already append a line from it. This is done by freeing
+** *str and setting it equal to the temporary string that stored the remaining
+** data. At any point when we reach the end of the file, we free the memory
+** used to track our location in *str because it is not needed anymore.
 */
 
 static int	new_line(char **str, char **line, int fd, int rt)
